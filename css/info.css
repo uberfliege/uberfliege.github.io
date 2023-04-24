@@ -1,0 +1,56 @@
+.info{
+    display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width:75%;
+  z-index: -3;
+}
+.fly{
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    
+    
+  }
+ 
+  button{
+    z-index: 8;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  position: absolute;
+  background-color: transparent;
+  margin-left: 50px;
+  margin-top: 525px;
+  
+  opacity: 100%;
+  cursor: pointer;
+  }
+  button2{
+    z-index: 10;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 250px;
+    margin-top: 525px;
+    
+  }
+  .blurb{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    margin-top: -100px;
+    margin-left: -10px;
+  }
+  button3{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    position: absolute;
+    z-index: 4;
+    margin-left: 265px;
+    margin-top: -15px;
+    opacity: 0;
+
+  }

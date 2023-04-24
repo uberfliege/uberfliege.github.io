@@ -1,0 +1,47 @@
+.fly{
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+}
+.center{
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  z-index: -3;
+}
+button{
+  z-index: 4;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+  position: absolute;
+  background-color: transparent;
+  margin-left: 100px;
+  margin-top: -470px;
+  opacity: 0%;
+  cursor: pointer;
+}
+button2{
+  z-index: 6;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 100px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -400px;
+  opacity: 0%;
+
+
+}
+button3{
+  z-index: 8;
+  color: rgb(43, 42, 42);
+  cursor: pointer;
+  font-size: 150px;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: -310px;
+  opacity: 0%;
+  
+}
