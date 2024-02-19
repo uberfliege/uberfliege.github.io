@@ -1,0 +1,68 @@
+
+#info2{
+  display:flex;
+  justify-content: right;
+  margin-right: 38px;
+  margin-top:-10px;
+  z-index: 5;
+  opacity: 90%;
+  
+  
+}
+
+
+
+#info1{
+   display: flex;
+   margin-left: 200px;
+   
+   margin-top: 40px;
+   justify-content: center;
+   z-index: 3;
+   opacity: 90%;
+}
+
+#full{
+  display:flex;
+  margin-top: 0px;
+  justify-content: center;
+  z-index: 2;
+
+
+  
+}
+#sitename{
+  display:flex;
+  margin-top: 10px;
+  justify-content: center;
+  
+  margin-right: -200px;
+  
+  z-index: 7;
+}
+
+.fly{
+  display:flex;
+  z-index: 4;
+  margin-top: -450px;
+  
+  margin-left: -100px;
+  
+ 
+}
+#studio{
+  display:flex;
+  margin-top: -300px;
+  justify-content: center;
+  
+  margin-left: 215px;
+  
+  z-index: 1;
+  opacity: 90%;
+}
+    
+
+
+ 
+
+
