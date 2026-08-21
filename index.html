@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Site</title>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        background: #171f26;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    /* ---- OVERLAY SYSTEM ---- */
+    .overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .overlay.active {
+        display: flex;
+    }
+
+    .bg-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .content {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* ---- UI PANEL (RIGHT SIDE, VERTICAL) ---- */
+    #ui {
+        position: absolute;
+        top: 33%;
+        right: 45%;
+        transform: translateY(-50%);
+        z-index: 100;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1;
+        scale: .4;
+        
+    }
+
+
+    .btn {
+        width: 100px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        margin-left: -300px;
+    }
+
+    .btn:hover {
+        transform: scale(1.5);
+    }
+    #insta{
+        transition: transform 0.2s ease; 
+    }
+    #insta:hover{
+        transform: scale(1.3);
+    }
+
+
+    #mail{
+        transition: transform 0.2s ease; 
+    }
+    #mail:hover{
+        transform: scale(1.3);
+    }
+
+    #tik{
+        transition: transform 0.2s ease; 
+    }
+    #tik:hover{
+        transform: scale(1.3);
+    }
+
+
+
+    /* Responsive adjustments */
+    @media(max-width: 600px) {
+        #ui {
+            right: 1%;
+            gap: 15px;
+        }
+        .btn {
+            width: 75px;
+        }
+        #title {
+            width: 160px;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<!-- AUDIO (starts on first click anywhere) -->
+<audio id="siteAudio". loop src="assets/sound.wav"></audio>
+
+<!-- UI PANEL (vertical on right side) -->
+
+<div id="ui">
+   
+    <a href="https://instagram.com/uberfliege" target="_blank">
+     <img id="insta" src="assets/insta.png" alt="insta">
+    </a>
+
+    <a href="https://tiktok.com/@studiofliege" target="_blank">
+     <img id="tik" src="assets/tik.png" alt="tik">
+    </a>
+
+  
+
+    <a href="mailto:blackfliege@gmail.com" target="_blank">
+    <img id="mail" src="assets/email.png" alt="Email Us">
+    </a>
+
+     
+    
+    
+    
+  
+    
+
+   
+</div>
+
+<!-- ----------- OVERLAYS ----------- -->
+
+<!-- 1. MAIN OVERLAY (car.gif background) -->
+<div id="main" class="overlay active">
+    
+    <img class="bg-img" src="assets/pbg.gif">
+</div>
+
+
+
+<script>
+// -------- AUDIO HANDLING --------
+let audioStarted = false;
+function startAudio() {
+    if (!audioStarted) {
+        const audio = document.getElementById("siteAudio");
+        audio.play().catch(e => console.log("Audio blocked:", e));
+        audioStarted = true;
+    }
+}
+document.addEventListener("click", startAudio, { once: true });
+
+
+// -------- OVERLAY SWITCHING --------
+const buttons = document.querySelectorAll(".btn");
+const overlays = document.querySelectorAll(".overlay");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const target = btn.dataset.target;
+        overlays.forEach(o => o.classList.remove("active"));
+        document.getElementById(target).classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
